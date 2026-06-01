@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f7f7f5"/>
+  <rect x="120" y="96" width="1360" height="808" fill="#fff" stroke="#d8d8d4"/>
+  <rect x="120" y="96" width="1360" height="72" fill="#111"/>
+  <text x="164" y="142" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">TeamWork</text>
+  <text x="1302" y="141" fill="#d8d8d8" font-family="Arial, Helvetica, sans-serif" font-size="15">Workspace</text>
+  <rect x="164" y="214" width="356" height="640" fill="#fbfbfa" stroke="#e1e1de"/>
+  <text x="196" y="264" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Team dashboard</text>
+  <text x="196" y="304" fill="#686865" font-family="Arial, Helvetica, sans-serif" font-size="17">Role-based access and workspace tasks</text>
+  <rect x="196" y="356" width="292" height="78" fill="#fff" stroke="#d8d8d4"/>
+  <text x="220" y="388" fill="#777" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="3">ACTIVE TASKS</text>
+  <text x="220" y="418" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">24</text>
+  <rect x="196" y="458" width="292" height="78" fill="#fff" stroke="#d8d8d4"/>
+  <text x="220" y="490" fill="#777" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="3">MEMBERS</text>
+  <text x="220" y="520" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">8</text>
+  <rect x="556" y="214" width="868" height="640" fill="#fff" stroke="#e1e1de"/>
+  <text x="604" y="266" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Sprint board</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="604" y="318" width="230" height="476" fill="#fafafa" stroke="#e1e1de"/>
+    <rect x="870" y="318" width="230" height="476" fill="#fafafa" stroke="#e1e1de"/>
+    <rect x="1136" y="318" width="230" height="476" fill="#fafafa" stroke="#e1e1de"/>
+    <text x="628" y="354" fill="#111" font-size="16" font-weight="700">To do</text>
+    <text x="894" y="354" fill="#111" font-size="16" font-weight="700">In progress</text>
+    <text x="1160" y="354" fill="#111" font-size="16" font-weight="700">Done</text>
+    <rect x="628" y="388" width="182" height="86" fill="#fff" stroke="#d8d8d4"/>
+    <rect x="628" y="494" width="182" height="86" fill="#fff" stroke="#d8d8d4"/>
+    <rect x="894" y="388" width="182" height="86" fill="#fff" stroke="#d8d8d4"/>
+    <rect x="894" y="494" width="182" height="86" fill="#fff" stroke="#d8d8d4"/>
+    <rect x="1160" y="388" width="182" height="86" fill="#fff" stroke="#d8d8d4"/>
+    <rect x="1160" y="494" width="182" height="86" fill="#fff" stroke="#d8d8d4"/>
+    <text x="648" y="422" fill="#111" font-size="15">Auth flow</text>
+    <text x="648" y="528" fill="#111" font-size="15">Workspace roles</text>
+    <text x="914" y="422" fill="#111" font-size="15">Task board API</text>
+    <text x="914" y="528" fill="#111" font-size="15">Contract tests</text>
+    <text x="1180" y="422" fill="#111" font-size="15">JWT cookies</text>
+    <text x="1180" y="528" fill="#111" font-size="15">Render deploy</text>
+  </g>
+</svg>

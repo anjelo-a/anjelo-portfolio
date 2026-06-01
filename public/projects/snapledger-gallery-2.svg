@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f8f8f6"/>
+  <rect x="148" y="112" width="1304" height="776" fill="#fff" stroke="#d8d8d4"/>
+  <text x="204" y="188" fill="#777" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="5">SYNC PIPELINE</text>
+  <text x="204" y="248" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Mobile data that recovers</text>
+  <text x="204" y="294" fill="#666" font-family="Arial, Helvetica, sans-serif" font-size="22">Kotlin app, Python FastAPI backend, PostgreSQL storage, and GCP deployment.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="214" y="426" width="230" height="130" fill="#111"/>
+    <text x="260" y="500" fill="#fff" font-size="24" font-weight="700">Android</text>
+    <rect x="534" y="426" width="230" height="130" fill="#fff" stroke="#111"/>
+    <text x="584" y="500" fill="#111" font-size="24" font-weight="700">FastAPI</text>
+    <rect x="854" y="426" width="230" height="130" fill="#fff" stroke="#111"/>
+    <text x="900" y="500" fill="#111" font-size="24" font-weight="700">Postgres</text>
+    <rect x="1174" y="426" width="230" height="130" fill="#fff" stroke="#111"/>
+    <text x="1230" y="500" fill="#111" font-size="24" font-weight="700">GCP</text>
+    <path d="M444 491h90M764 491h90M1084 491h90" stroke="#888"/>
+    <text x="214" y="646" fill="#111" font-size="24" font-weight="700">Recovery checks</text>
+    <text x="214" y="686" fill="#666" font-size="19">queued writes, sync retries, Pydantic validation, nightly AI evals</text>
+  </g>
+</svg>

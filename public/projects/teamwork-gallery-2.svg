@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f8f8f6"/>
+  <rect x="148" y="112" width="1304" height="776" fill="#fff" stroke="#d8d8d4"/>
+  <text x="204" y="188" fill="#777" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="5">TEAMWORK ARCHITECTURE</text>
+  <text x="204" y="248" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Shared contracts, safer APIs</text>
+  <text x="204" y="294" fill="#666" font-family="Arial, Helvetica, sans-serif" font-size="22">A full-stack TypeScript workflow with RBAC, rate limits, and Render deployment.</text>
+  <g fill="#fff" stroke="#111" font-family="Arial, Helvetica, sans-serif">
+    <rect x="210" y="400" width="250" height="108"/>
+    <rect x="675" y="400" width="250" height="108"/>
+    <rect x="1140" y="400" width="250" height="108"/>
+    <rect x="442" y="638" width="250" height="108"/>
+    <rect x="908" y="638" width="250" height="108"/>
+    <text x="252" y="452" fill="#111" stroke="none" font-size="24" font-weight="700">Next.js UI</text>
+    <text x="724" y="452" fill="#111" stroke="none" font-size="24" font-weight="700">NestJS API</text>
+    <text x="1178" y="452" fill="#111" stroke="none" font-size="24" font-weight="700">PostgreSQL</text>
+    <text x="486" y="690" fill="#111" stroke="none" font-size="24" font-weight="700">Prisma</text>
+    <text x="948" y="690" fill="#111" stroke="none" font-size="24" font-weight="700">Render</text>
+    <path d="M460 454h215M925 454h215M800 508 590 638M800 508l230 130" fill="none" stroke="#9a9a94"/>
+  </g>
+  <rect x="204" y="812" width="1192" height="1" fill="#ddd"/>
+  <text x="204" y="848" fill="#666" font-family="Arial, Helvetica, sans-serif" font-size="18">Authentication / RBAC / shared contracts / load-tested endpoints</text>
+</svg>

@@ -35,7 +35,7 @@ export const profile = {
   email: "arnaez.anjelo@gmail.com",
   resumeUrl: "/resume/anjelo-arnaez-resume.pdf",
   about: [
-    "I’m Anjelo, a Computer Science student from the Philippines focused on becoming useful in remote startup teams.",
+    "I’m Anjelo, a Computer Science student from the Philippines building real projects and growing toward remote startup work.",
     "Most of my growth came from building outside class. I had to learn how to read docs, debug alone, make decisions, and finish projects without waiting for someone to give me every next step. That shaped how I work more than any single tech stack.",
     "Right now, I’m open to learning across different products and industries. What matters most to me is working on real problems, getting feedback from experienced engineers, and improving through actual product work.",
     "I want to keep growing through real work and become someone a remote startup team can trust with ownership.",
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     ],
     learned: ["Structured full-stack monorepos", "Measured API and UI readiness", "Hardened auth and production deployment boundaries"],
     github: "https://github.com/",
-    screenshots: ["/projects/studyhub-1.svg", "/projects/studyhub-2.svg"],
+    screenshots: ["/projects/teamwork-gallery-1.svg", "/projects/teamwork-gallery-2.svg"],
   },
   {
     slug: "snapledger",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     learned: ["Designed offline-first mobile flows", "Validated AI outputs with schemas", "Built CI and nightly evals around real failure modes"],
     github: "https://github.com/",
     demo: "https://vercel.com/",
-    screenshots: ["/projects/portfolio-1.svg", "/projects/portfolio-2.svg"],
+    screenshots: ["/projects/snapledger-gallery-1.svg", "/projects/snapledger-gallery-2.svg"],
   },
 ];
 

@@ -84,7 +84,7 @@ export default function Home() {
 
           <Section title="Project Gallery">
             <div className="space-y-6">
-              {projects.slice(0, 2).map((project) => (
+              {projects.map((project) => (
                 <div className="border-t border-[var(--line)] pt-5" key={project.slug}>
                   <h3 className="mb-3 font-semibold">{project.title}</h3>
                   <LightboxGallery images={project.screenshots} title={project.title} />
@@ -105,7 +105,7 @@ export default function Home() {
           </Section>
         </div>
 
-        <aside className="lg:sticky lg:top-6 lg:self-start">
+        <aside>
           <ResumeCard />
           <Section title="Learning Journey">
             <div className="relative ml-3 border-l border-[var(--line)]">
