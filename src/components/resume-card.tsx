@@ -14,19 +14,19 @@ export function ResumeCard() {
         onClick={() => setOpen(true)}
         type="button"
       >
-        <div className="mb-5 flex items-center justify-between">
-          <FileText size={19} />
-          <span className="text-[12px] uppercase tracking-[0.16em] text-neutral-500">Resume</span>
-        </div>
-        <div className="space-y-3">
-          <p className="text-base font-semibold">Entry-level developer resume</p>
-          <div className="space-y-2 text-sm text-neutral-600">
-            <p>Projects-first experience</p>
-            <p>TypeScript, React, Next.js</p>
-            <p>Backend and cloud fundamentals</p>
+        <div className="border border-[var(--line)] bg-white p-4">
+          <div className="mb-4 flex items-center justify-between border-b border-[var(--line)] pb-3">
+            <FileText size={20} />
+            <span className="text-[11px] uppercase tracking-[0.16em] text-neutral-500">Resume</span>
           </div>
-          <p className="text-sm font-medium">Preview resume</p>
+          <iframe
+            className="pointer-events-none h-[420px] w-full border border-[var(--line)] bg-white"
+            src={`${profile.resumeUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+            tabIndex={-1}
+            title="Resume preview"
+          />
         </div>
+        <p className="mt-4 text-sm font-medium">Tap for full view</p>
       </button>
 
       {open ? (
@@ -39,28 +39,7 @@ export function ResumeCard() {
               </button>
             </div>
             <div className="grid gap-5 p-5 md:grid-cols-[1fr_220px]">
-              <div className="min-h-[420px] border border-[var(--line)] bg-white p-7">
-                <p className="text-2xl font-bold">{profile.name}</p>
-                <p className="mt-1 text-neutral-600">{profile.role}</p>
-                <div className="mt-7 space-y-5 text-sm">
-                  <div>
-                    <p className="mb-2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Profile</p>
-                    <div className="space-y-3 leading-6 text-neutral-700">
-                      {profile.about.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="mb-2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Highlights</p>
-                    <ul className="list-disc space-y-1 pl-5 text-neutral-700">
-                      <li>Project-based full-stack learning</li>
-                      <li>Responsive UI and accessibility practice</li>
-                      <li>Git, deployment, and database fundamentals</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <iframe className="h-[72vh] min-h-[520px] w-full border border-[var(--line)] bg-white" src={profile.resumeUrl} title="Resume PDF preview" />
               <div className="space-y-3">
                 <a className="primary-button flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium" href={profile.resumeUrl} download>
                   <Download size={16} /> Download Resume
@@ -68,7 +47,7 @@ export function ResumeCard() {
                 <a className="flex items-center justify-center gap-2 border border-neutral-900 px-4 py-3 text-sm font-medium" href={profile.resumeUrl} rel="noopener noreferrer" target="_blank">
                   <ExternalLink size={16} /> Open PDF
                 </a>
-                <p className="text-xs leading-5 text-neutral-500">Add your final PDF at public/resume/anjelo-arnaez-resume.pdf when ready.</p>
+                <p className="text-xs leading-5 text-neutral-500">This preview summarizes the attached PDF. Use Open PDF for the full resume.</p>
               </div>
             </div>
           </div>

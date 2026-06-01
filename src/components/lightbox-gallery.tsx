@@ -15,19 +15,19 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
   return (
     <>
       <div className="grid gap-3">
-        <button className="relative aspect-[16/10] overflow-hidden bg-neutral-100" onClick={() => setActive(true)} type="button">
+        <div className="relative">
+          <button className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100" onClick={() => setActive(true)} type="button">
           <Image alt={`${title} screenshot ${index + 1}`} className="object-cover" fill src={current} />
-        </button>
-        <div className="flex items-center justify-between border-t border-[var(--line)] pt-3">
-          <button className="inline-flex items-center gap-2 py-2 text-sm font-medium" onClick={goPrevious} type="button">
-            <ChevronLeft size={17} /> Previous
           </button>
-          <p className="text-sm text-neutral-500">
-            {index + 1} / {images.length}
-          </p>
-          <button className="inline-flex items-center gap-2 py-2 text-sm font-medium" onClick={goNext} type="button">
-            Next <ChevronRight size={17} />
+          <button aria-label="Previous image" className="absolute left-0 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center bg-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]" onClick={goPrevious} type="button">
+            <ChevronLeft size={28} strokeWidth={1.8} />
           </button>
+          <button aria-label="Next image" className="absolute right-0 top-1/2 grid h-16 w-16 translate-x-1/2 -translate-y-1/2 place-items-center bg-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]" onClick={goNext} type="button">
+            <ChevronRight size={28} strokeWidth={1.8} />
+          </button>
+        </div>
+        <div className="flex justify-center border-t border-[var(--line)] pt-3">
+          <p className="text-sm text-neutral-500">{index + 1} / {images.length}</p>
         </div>
       </div>
       {active ? (
@@ -41,11 +41,11 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
             </div>
             <div className="relative aspect-[16/10] bg-white">
               <Image alt={`${title} enlarged screenshot`} className="object-contain" fill src={current} />
-              <button aria-label="Previous image" className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 p-3" onClick={goPrevious} type="button">
-                <ChevronLeft size={22} />
+              <button aria-label="Previous image" className="absolute left-3 top-1/2 grid h-16 w-16 -translate-y-1/2 place-items-center bg-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]" onClick={goPrevious} type="button">
+                <ChevronLeft size={28} strokeWidth={1.8} />
               </button>
-              <button aria-label="Next image" className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 p-3" onClick={goNext} type="button">
-                <ChevronRight size={22} />
+              <button aria-label="Next image" className="absolute right-3 top-1/2 grid h-16 w-16 -translate-y-1/2 place-items-center bg-white shadow-[0_10px_30px_rgba(0,0,0,0.12)]" onClick={goNext} type="button">
+                <ChevronRight size={28} strokeWidth={1.8} />
               </button>
             </div>
           </div>

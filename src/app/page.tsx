@@ -2,12 +2,16 @@ import Link from "next/link";
 import { ArrowRight, ImageIcon, Mail, MapPin } from "lucide-react";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { ResumeCard } from "@/components/resume-card";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { ExternalLink, Pill, Section } from "@/components/ui";
 import { certifications, learningJourney, profile, projects, socialLinks, techStack } from "@/data/portfolio";
 
 export default function Home() {
   return (
-    <main className="mx-auto min-h-screen max-w-5xl px-7 py-10 sm:px-10 md:px-12 lg:px-8">
+    <main className="relative mx-auto min-h-screen max-w-5xl px-7 py-10 sm:px-10 md:px-12 lg:px-8">
+      <div className="absolute right-7 top-7 sm:right-10 md:right-12 lg:right-8">
+        <ThemeToggle />
+      </div>
       <header className="grid gap-7 border-b border-[var(--line)] pb-9 md:grid-cols-[168px_1fr]">
         <div className="flex aspect-square w-full max-w-[168px] items-center justify-center bg-neutral-100 text-neutral-500">
           <ImageIcon size={34} strokeWidth={1.6} />
@@ -20,7 +24,7 @@ export default function Home() {
           </p>
           <p className="mt-5 text-base text-neutral-900">{profile.role}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a className="inline-flex items-center gap-2 border-b border-transparent px-1 py-2.5 text-sm font-medium hover:border-neutral-900" href={`mailto:${profile.email}`}>
+            <a className="primary-button inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium" href={`mailto:${profile.email}`}>
               <Mail size={16} /> Send Email
             </a>
             <Link className="inline-flex items-center gap-2 border-b border-neutral-900 px-1 py-2.5 text-sm font-medium" href="/projects">
@@ -44,8 +48,7 @@ export default function Home() {
             <div className="divide-y divide-[var(--line)]">
               {techStack.map((group) => (
                 <div className="grid gap-3 py-5 sm:grid-cols-[150px_1fr]" key={group.category}>
-                  <div className="flex items-center gap-3">
-                    <group.icon size={20} />
+                  <div>
                     <h3 className="font-semibold">{group.category}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -79,17 +82,6 @@ export default function Home() {
             </div>
           </Section>
 
-          <Section title="Certifications" href="/certifications">
-            <div className="divide-y divide-[var(--line)]">
-              {certifications.slice(0, 2).map((cert) => (
-                <ExternalLink className="block py-5" href={cert.url} key={cert.title}>
-                  <p className="text-sm text-neutral-500">{cert.date} / {cert.issuer}</p>
-                  <h3 className="mt-2 font-semibold">{cert.title}</h3>
-                </ExternalLink>
-              ))}
-            </div>
-          </Section>
-
           <Section title="Project Gallery">
             <div className="space-y-6">
               {projects.slice(0, 2).map((project) => (
@@ -97,6 +89,17 @@ export default function Home() {
                   <h3 className="mb-3 font-semibold">{project.title}</h3>
                   <LightboxGallery images={project.screenshots} title={project.title} />
                 </div>
+              ))}
+            </div>
+          </Section>
+
+          <Section title="Certifications" href="/certifications">
+            <div className="divide-y divide-[var(--line)]">
+              {certifications.slice(0, 4).map((cert) => (
+                <ExternalLink className="block py-5" href={cert.url} key={cert.title}>
+                  <p className="text-sm text-neutral-500">{cert.date} / {cert.issuer}</p>
+                  <h3 className="mt-2 font-semibold">{cert.title}</h3>
+                </ExternalLink>
               ))}
             </div>
           </Section>
