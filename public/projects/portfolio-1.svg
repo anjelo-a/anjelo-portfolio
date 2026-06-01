@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#f7f7f4"/>
+  <rect x="80" y="70" width="740" height="610" fill="#fbfbf8" stroke="#171717" stroke-width="3"/>
+  <rect x="850" y="70" width="270" height="260" fill="#fbfbf8" stroke="#d9d7d0" stroke-width="3"/>
+  <text x="120" y="160" fill="#171717" font-family="Arial" font-size="56" font-weight="700">Anjelo Arnaez</text>
+  <line x1="120" x2="780" y1="230" y2="230" stroke="#d9d7d0" stroke-width="3"/>
+  <rect x="120" y="285" width="280" height="130" fill="#fff" stroke="#d9d7d0" stroke-width="3"/>
+  <rect x="435" y="285" width="280" height="130" fill="#fff" stroke="#d9d7d0" stroke-width="3"/>
+  <rect x="120" y="455" width="595" height="120" fill="#fff" stroke="#171717" stroke-width="3"/>
+</svg>

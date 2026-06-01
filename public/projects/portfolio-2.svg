@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <rect width="1200" height="750" fill="#eeeeea"/>
+  <rect x="100" y="80" width="1000" height="590" fill="#fbfbf8" stroke="#171717" stroke-width="3"/>
+  <text x="150" y="150" fill="#171717" font-family="Arial" font-size="42" font-weight="700">Project Case Study</text>
+  <rect x="150" y="220" width="900" height="120" fill="#fff" stroke="#d9d7d0" stroke-width="3"/>
+  <rect x="150" y="390" width="430" height="190" fill="#fff" stroke="#d9d7d0" stroke-width="3"/>
+  <rect x="620" y="390" width="430" height="190" fill="#fff" stroke="#d9d7d0" stroke-width="3"/>
+</svg>
