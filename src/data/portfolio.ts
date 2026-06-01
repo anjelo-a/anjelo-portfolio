@@ -92,12 +92,12 @@ export const projects: Project[] = [
     github: "https://github.com/",
     demo: "https://vercel.com/",
     screenshots: [
-      "/projects/poisontrace-1.png",
-      "/projects/poisontrace-2.png",
-      "/projects/poisontrace-3.png",
-      "/projects/poisontrace-4.png",
-      "/projects/poisontrace-5.png",
-      "/projects/poisontrace-6.png",
+      "/projects/poisontrace-1.jpg",
+      "/projects/poisontrace-2.jpg",
+      "/projects/poisontrace-3.jpg",
+      "/projects/poisontrace-4.jpg",
+      "/projects/poisontrace-5.jpg",
+      "/projects/poisontrace-6.jpg",
     ],
   },
   {
