@@ -9,6 +9,10 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
   const [active, setActive] = useState(false);
   const [, startTransition] = useTransition();
   const current = images[index];
+  const isPoisonTrace = title === "PoisonTrace";
+  const controlClass = isPoisonTrace
+    ? "border border-white bg-black/20 text-white shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition hover:bg-black/35"
+    : "border border-neutral-200 bg-white text-neutral-950 shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-white";
 
   const goPrevious = () => {
     startTransition(() => {
@@ -28,13 +32,13 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100">
             <Image alt={`${title} screenshot ${index + 1}`} className="object-cover" fill sizes="(min-width: 1024px) 768px, calc(100vw - 56px)" src={current} />
           </div>
-          <button aria-label="Open full image" className="absolute right-3 top-3 grid h-9 w-9 place-items-center border border-neutral-200 bg-white text-neutral-950 shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-white" onClick={() => setActive(true)} type="button">
+          <button aria-label="Open full image" className={`absolute right-3 top-3 grid h-9 w-9 place-items-center ${controlClass}`} onClick={() => setActive(true)} type="button">
             <Maximize2 size={16} strokeWidth={1.8} />
           </button>
-          <button aria-label="Previous image" className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center border border-neutral-200 bg-white text-neutral-950 shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-white" onClick={goPrevious} type="button">
+          <button aria-label="Previous image" className={`absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center ${controlClass}`} onClick={goPrevious} type="button">
             <ChevronLeft size={21} strokeWidth={1.9} />
           </button>
-          <button aria-label="Next image" className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center border border-neutral-200 bg-white text-neutral-950 shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-white" onClick={goNext} type="button">
+          <button aria-label="Next image" className={`absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center ${controlClass}`} onClick={goNext} type="button">
             <ChevronRight size={21} strokeWidth={1.9} />
           </button>
         </div>
@@ -53,10 +57,10 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
             </div>
             <div className="relative aspect-[16/10] bg-white">
               <Image alt={`${title} enlarged screenshot`} className="object-contain" fill sizes="(min-width: 1024px) 1024px, calc(100vw - 32px)" src={current} />
-              <button aria-label="Previous image" className="absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center border border-neutral-200 bg-white text-neutral-950 shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-white" onClick={goPrevious} type="button">
+              <button aria-label="Previous image" className={`absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center ${controlClass}`} onClick={goPrevious} type="button">
                 <ChevronLeft size={22} strokeWidth={1.9} />
               </button>
-              <button aria-label="Next image" className="absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center border border-neutral-200 bg-white text-neutral-950 shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-white" onClick={goNext} type="button">
+              <button aria-label="Next image" className={`absolute right-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center ${controlClass}`} onClick={goNext} type="button">
                 <ChevronRight size={22} strokeWidth={1.9} />
               </button>
             </div>
