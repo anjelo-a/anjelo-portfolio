@@ -7,33 +7,37 @@ import { certifications, learningJourney, profile, projects, socialLinks, techSt
 
 export default function Home() {
   return (
-    <main className="mx-auto min-h-screen max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <header className="grid gap-8 border-b border-[var(--line)] pb-10 md:grid-cols-[220px_1fr]">
-        <div className="flex aspect-square w-full max-w-[220px] items-center justify-center bg-neutral-200 text-neutral-500">
-          <ImageIcon size={44} />
+    <main className="mx-auto min-h-screen max-w-5xl px-7 py-10 sm:px-10 md:px-12 lg:px-8">
+      <header className="grid gap-7 border-b border-[var(--line)] pb-9 md:grid-cols-[168px_1fr]">
+        <div className="flex aspect-square w-full max-w-[168px] items-center justify-center bg-neutral-100 text-neutral-500">
+          <ImageIcon size={34} strokeWidth={1.6} />
           <span className="sr-only">Profile image placeholder</span>
         </div>
         <div className="flex flex-col justify-center">
-          <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">{profile.name}</h1>
-          <p className="mt-3 inline-flex items-center gap-2 text-base text-neutral-700">
-            <MapPin size={17} /> {profile.location}
+          <h1 className="text-3xl font-semibold leading-tight sm:text-4xl">{profile.name}</h1>
+          <p className="mt-2 inline-flex items-center gap-2 text-sm text-neutral-700">
+            <MapPin size={15} /> {profile.location}
           </p>
-          <p className="mt-6 text-xl text-neutral-900">{profile.role}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a className="inline-flex items-center gap-2 bg-neutral-950 px-5 py-3 text-sm font-semibold text-white" href={`mailto:${profile.email}`} style={{ color: "#ffffff" }}>
-              <Mail size={17} /> Send Email
+          <p className="mt-5 text-base text-neutral-900">{profile.role}</p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a className="inline-flex items-center gap-2 border-b border-transparent px-1 py-2.5 text-sm font-medium hover:border-neutral-900" href={`mailto:${profile.email}`}>
+              <Mail size={16} /> Send Email
             </a>
-            <Link className="inline-flex items-center gap-2 border-b border-neutral-900 px-1 py-3 text-sm font-medium" href="/projects">
-              View Projects <ArrowRight size={16} />
+            <Link className="inline-flex items-center gap-2 border-b border-neutral-900 px-1 py-2.5 text-sm font-medium" href="/projects">
+              View Projects <ArrowRight size={15} />
             </Link>
           </div>
         </div>
       </header>
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
+      <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
         <div>
           <Section title="About">
-            <p className="max-w-3xl text-lg leading-9 text-neutral-800">{profile.about}</p>
+            <div className="max-w-2xl space-y-5 text-[15px] leading-7 text-neutral-800 sm:text-base sm:leading-8">
+              {profile.about.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </Section>
 
           <Section title="Tech Stack" href="/tech-stack">
@@ -60,7 +64,7 @@ export default function Home() {
                 <Link className="group block py-6" href={`/projects/${project.slug}`} key={project.slug}>
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <h3 className="text-xl font-semibold">{project.title}</h3>
+                      <h3 className="text-lg font-semibold">{project.title}</h3>
                       <p className="mt-2 max-w-2xl text-sm leading-6 text-neutral-600">{project.summary}</p>
                     </div>
                     <ArrowRight className="transition group-hover:translate-x-1" size={20} />
@@ -112,8 +116,8 @@ export default function Home() {
                   />
                   <div className="grid grid-cols-[1fr_auto] items-start gap-5">
                     <div>
-                      <h3 className="text-xl font-semibold leading-tight">{item.title}</h3>
-                      <p className="mt-2 text-base leading-6 text-neutral-700">{item.detail}</p>
+                      <h3 className="text-base font-semibold leading-tight">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-neutral-700">{item.detail}</p>
                     </div>
                     <p className="border-b border-[var(--line)] px-3 py-1 font-mono text-sm">{item.date}</p>
                   </div>
@@ -133,8 +137,8 @@ export default function Home() {
           </Section>
         </aside>
       </div>
-      <a className="fixed bottom-4 right-4 z-40 inline-flex items-center gap-2 bg-neutral-950 px-5 py-3 text-sm font-semibold text-white shadow-lg" href={`mailto:${profile.email}`} style={{ color: "#ffffff" }}>
-        <Mail size={17} /> Send Email
+      <a className="primary-button fixed bottom-5 right-5 z-40 hidden items-center gap-2 px-4 py-2.5 text-sm font-medium shadow-sm sm:inline-flex" href={`mailto:${profile.email}`}>
+        <Mail size={16} /> Send Email
       </a>
     </main>
   );

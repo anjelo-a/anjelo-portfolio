@@ -10,16 +10,16 @@ export function ResumeCard() {
   return (
     <>
       <button
-        className="w-full border-t border-[var(--line)] py-7 text-left"
+        className="w-full border-t border-[var(--line)] py-6 text-left"
         onClick={() => setOpen(true)}
         type="button"
       >
         <div className="mb-5 flex items-center justify-between">
-          <FileText size={22} />
-          <span className="text-xs uppercase tracking-[0.18em] text-neutral-500">Resume</span>
+          <FileText size={19} />
+          <span className="text-[12px] uppercase tracking-[0.16em] text-neutral-500">Resume</span>
         </div>
         <div className="space-y-3">
-          <p className="text-lg font-semibold">Entry-level developer resume</p>
+          <p className="text-base font-semibold">Entry-level developer resume</p>
           <div className="space-y-2 text-sm text-neutral-600">
             <p>Projects-first experience</p>
             <p>TypeScript, React, Next.js</p>
@@ -45,7 +45,11 @@ export function ResumeCard() {
                 <div className="mt-7 space-y-5 text-sm">
                   <div>
                     <p className="mb-2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Profile</p>
-                    <p className="leading-6 text-neutral-700">{profile.about}</p>
+                    <div className="space-y-3 leading-6 text-neutral-700">
+                      {profile.about.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
                   </div>
                   <div>
                     <p className="mb-2 font-semibold uppercase tracking-[0.16em] text-neutral-500">Highlights</p>
@@ -58,7 +62,7 @@ export function ResumeCard() {
                 </div>
               </div>
               <div className="space-y-3">
-                <a className="flex items-center justify-center gap-2 border border-neutral-900 bg-neutral-900 px-4 py-3 text-sm font-medium text-white" href={profile.resumeUrl} download>
+                <a className="primary-button flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium" href={profile.resumeUrl} download>
                   <Download size={16} /> Download Resume
                 </a>
                 <a className="flex items-center justify-center gap-2 border border-neutral-900 px-4 py-3 text-sm font-medium" href={profile.resumeUrl} rel="noopener noreferrer" target="_blank">

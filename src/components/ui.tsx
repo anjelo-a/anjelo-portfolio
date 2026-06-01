@@ -11,9 +11,9 @@ export function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="border-t border-[var(--line)] py-7">
-      <div className="mb-5 flex items-center justify-between gap-4">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">{title}</h2>
+    <section className="border-t border-[var(--line)] py-6 sm:py-7">
+      <div className="mb-4 flex items-center justify-between gap-4">
+        <h2 className="text-[12px] font-semibold uppercase tracking-[0.16em] text-neutral-500">{title}</h2>
         {href ? (
           <Link className="inline-flex items-center gap-1 text-sm font-medium hover:underline" href={href}>
             View All <ArrowUpRight size={15} />
@@ -48,7 +48,7 @@ export function ExternalLink({
 }
 
 export function Pill({ children }: { children: React.ReactNode }) {
-  return <span className="border-b border-[var(--line)] px-1 py-1 text-sm text-neutral-700">{children}</span>;
+  return <span className="border-b border-[var(--line)] px-1 py-1 text-[13px] text-neutral-700">{children}</span>;
 }
 
 export function MonoCard({ children, className = "" }: { children: React.ReactNode; className?: string }) {

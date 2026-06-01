@@ -36,8 +36,12 @@ export const profile = {
   location: "Manila, Philippines",
   email: "hello@anjelo.dev",
   resumeUrl: "/resume/anjelo-arnaez-resume.pdf",
-  about:
-    "I am an aspiring full-stack developer focused on building clear, responsive web apps with TypeScript, React, Next.js, and practical backend fundamentals. My portfolio is centered on projects, steady learning, and production-minded habits: readable code, thoughtful UI states, accessible interactions, and reliable deployment workflows.",
+  about: [
+    "I’m a full-stack developer and Computer Science student focused on building reliable web, backend, mobile, and AI-integrated systems.",
+    "I’ve built projects like TeamWork, a collaboration platform with authentication, role-based access, shared TypeScript contracts, and load-tested APIs; PoisonTrace, a Solana wallet-poisoning detection pipeline with data filtering, idempotent storage, async jobs, and a React dashboard; and SnapLedger, an offline-first Android receipt ledger with backend sync recovery and Gemini-powered receipt validation.",
+    "My work usually sits across frontend interfaces, backend APIs, databases, testing, deployment, and reliability checks. I care about building projects that work beyond the demo stage, with clear architecture, measurable behavior, and enough polish for real users.",
+    "Right now, I’m focused on growing as a full-stack engineer in fast-moving startup environments. I want to keep working on real systems, learn from stronger engineers, and build products where speed, reliability, and product sense all matter.",
+  ],
 };
 
 export const socialLinks = [
