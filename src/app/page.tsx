@@ -19,7 +19,7 @@ export default function Home() {
           className="aspect-square w-full max-w-[168px] object-cover"
           height={168}
           priority
-          src="/profile/IMG_2572.jpeg"
+          src="/profile/843c8df7-8399-47d9-92f6-efd2bb87a430.jpeg"
           width={168}
         />
         <div className="flex flex-col justify-center">
