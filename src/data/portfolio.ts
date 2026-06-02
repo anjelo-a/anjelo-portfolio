@@ -29,7 +29,7 @@ export type Project = {
 };
 
 export const profile = {
-  name: "Anjelo Benedict L. Arnaez",
+  name: "Anjelo Benedict Arnaez",
   role: "Full-Stack Developer",
   location: "Manila, Philippines",
   email: "arnaez.anjelo@gmail.com",
