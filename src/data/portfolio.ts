@@ -89,8 +89,8 @@ export const projects: Project[] = [
       "React + Go dashboard load-tested to ~190 req/s at p99 123ms",
     ],
     learned: ["Built reproducible data pipelines", "Designed false-positive regression checks", "Used async jobs and exports for operational workflows"],
-    github: "https://github.com/",
-    demo: "https://vercel.com/",
+    github: "https://github.com/anjelo-a/PoisonTrace",
+    demo: "https://poison-trace-web.vercel.app",
     screenshots: [
       "/projects/poisontrace-1.jpg",
       "/projects/poisontrace-2.jpg",
@@ -113,8 +113,8 @@ export const projects: Project[] = [
       "Task-board ready time measured at 553ms p50 and 581ms p95",
     ],
     learned: ["Structured full-stack monorepos", "Measured API and UI readiness", "Hardened auth and production deployment boundaries"],
-    github: "https://github.com/",
-    screenshots: ["/projects/teamwork-gallery-1.svg", "/projects/teamwork-gallery-2.svg"],
+    github: "https://github.com/anjelo-a/teamwork",
+    screenshots: [],
   },
   {
     slug: "snapledger",
@@ -129,9 +129,16 @@ export const projects: Project[] = [
       "8 Compose routes with MVVM + StateFlow and sync determinism tests",
     ],
     learned: ["Designed offline-first mobile flows", "Validated AI outputs with schemas", "Built CI and nightly evals around real failure modes"],
-    github: "https://github.com/",
-    demo: "https://vercel.com/",
-    screenshots: ["/projects/snapledger-gallery-1.svg", "/projects/snapledger-gallery-2.svg"],
+    github: "https://github.com/anjelo-a/snapledger",
+    screenshots: [
+      "/projects/snapledger-1.png",
+      "/projects/snapledger-2.png",
+      "/projects/snapledger-3.png",
+      "/projects/snapledger-4.png",
+      "/projects/snapledger-5.png",
+      "/projects/snapledger-6.png",
+      "/projects/snapledger-7.png",
+    ],
   },
 ];
 
@@ -149,10 +156,10 @@ export const learningJourney = [
 ];
 
 export const certifications = [
-  { title: "Introduction to IoT", issuer: "Cisco Networking Academy", date: "Resume certificate", url: "https://www.netacad.com/" },
-  { title: "Introduction to Data Science", issuer: "Cisco Networking Academy", date: "Resume certificate", url: "https://www.netacad.com/" },
-  { title: "Python Essentials", issuer: "Cisco Networking Academy", date: "Resume certificate", url: "https://www.netacad.com/" },
-  { title: "Python Basics", issuer: "University of Michigan / Coursera", date: "Resume certificate", url: "https://www.coursera.org/" },
+  { title: "Introduction to IoT", issuer: "Cisco Networking Academy", date: "Certificate", url: "/certificates/introduction-to-iot-cisco.pdf" },
+  { title: "Introduction to Data Science", issuer: "Cisco Networking Academy", date: "Certificate", url: "/certificates/introduction-to-data-science-cisco.pdf" },
+  { title: "Python Essentials 1", issuer: "Cisco Networking Academy", date: "Certificate", url: "/certificates/python-essentials-1-cisco.pdf" },
+  { title: "Python Basic", issuer: "HackerRank", date: "Certificate", url: "/certificates/python-basic-hackerrank.pdf" },
 ];
 
 export const journeyIcon = GraduationCap;

@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
-  <rect width="1200" height="750" fill="#f7f7f4"/>
-  <rect x="90" y="80" width="1020" height="590" fill="#111" stroke="#111" stroke-width="3"/>
-  <text x="130" y="150" fill="#f7f7f4" font-family="Arial" font-size="42" font-weight="700">StudyHub API</text>
-  <text x="130" y="230" fill="#f7f7f4" font-family="Arial" font-size="28">GET /sessions</text>
-  <text x="130" y="290" fill="#d9d7d0" font-family="Arial" font-size="24">{ "topic": "TypeScript", "minutes": 45 }</text>
-  <text x="130" y="370" fill="#f7f7f4" font-family="Arial" font-size="28">POST /topics</text>
-  <text x="130" y="430" fill="#d9d7d0" font-family="Arial" font-size="24">{ "goal": "Build weekly consistency" }</text>
-</svg>

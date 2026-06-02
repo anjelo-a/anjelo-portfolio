@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { ExternalLink, MonoCard, Pill, Section } from "@/components/ui";
 import { projects } from "@/data/portfolio";
@@ -57,7 +57,20 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </Section>
 
         <Section title="Gallery">
-          <LightboxGallery images={project.screenshots} title={project.title} />
+          {project.screenshots.length > 0 ? (
+            <LightboxGallery images={project.screenshots} title={project.title} />
+          ) : (
+            <div className="border border-[var(--line)] bg-neutral-950 px-6 py-10 text-white">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-400">404 / Work Underway</p>
+              <h2 className="mt-3 text-3xl font-semibold">Gallery not ready yet</h2>
+              <p className="mt-3 max-w-2xl leading-7 text-neutral-300">
+                Screenshots are still being prepared for this case study. The project repository has the latest source and implementation details.
+              </p>
+              <ExternalLink className="mt-6 inline-flex items-center gap-2 border border-white px-4 py-2 text-sm font-medium hover:bg-white hover:text-neutral-950" href={project.github}>
+                View on GitHub <ArrowUpRight size={15} />
+              </ExternalLink>
+            </div>
+          )}
         </Section>
 
         <Section title="What I Learned">
