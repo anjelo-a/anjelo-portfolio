@@ -70,12 +70,12 @@ export default function Home() {
             <div className="divide-y divide-[var(--line)]">
               {projects.map((project) => (
                 <Link className="group block py-6" href={`/projects/${project.slug}`} key={project.slug}>
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                    <div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
                       <h3 className="text-lg font-semibold">{project.title}</h3>
                       <p className="mt-2 max-w-2xl text-sm leading-6 text-neutral-600">{project.summary}</p>
                     </div>
-                    <ArrowRight className="transition group-hover:translate-x-1" size={20} />
+                    <ArrowRight className="mt-1 shrink-0 transition group-hover:translate-x-1" size={20} />
                   </div>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.stack.slice(0, 4).map((tool) => (
