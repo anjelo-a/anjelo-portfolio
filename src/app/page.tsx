@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ImageIcon, Mail, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ImageIcon, Mail, MapPin } from "lucide-react";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { ResumeCard } from "@/components/resume-card";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -87,7 +87,17 @@ export default function Home() {
               {projects.map((project) => (
                 <div className="border-t border-[var(--line)] pt-5" key={project.slug}>
                   <h3 className="mb-3 font-semibold">{project.title}</h3>
-                  <LightboxGallery images={project.screenshots} title={project.title} />
+                  {project.screenshots.length > 0 ? (
+                    <LightboxGallery images={project.screenshots} title={project.title} />
+                  ) : (
+                    <div className="border border-[var(--line)] bg-neutral-950 px-5 py-8 text-white">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">404 / Work Underway</p>
+                      <p className="mt-2 text-lg font-semibold">Gallery not ready yet</p>
+                      <ExternalLink className="mt-5 inline-flex items-center gap-2 border border-white px-4 py-2 text-sm font-medium hover:bg-white hover:text-neutral-950" href={project.github}>
+                        View on GitHub <ArrowUpRight size={15} />
+                      </ExternalLink>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

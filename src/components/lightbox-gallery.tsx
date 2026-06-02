@@ -8,6 +8,15 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
   const [index, setIndex] = useState(0);
   const [active, setActive] = useState(false);
   const [, startTransition] = useTransition();
+
+  if (images.length === 0) {
+    return (
+      <div className="border border-[var(--line)] bg-neutral-100 px-5 py-8 text-center text-sm text-neutral-600">
+        Gallery not ready yet.
+      </div>
+    );
+  }
+
   const current = images[index];
   const isPoisonTrace = title === "PoisonTrace";
   const frameClass = isPoisonTrace ? "bg-black" : "bg-neutral-100";
