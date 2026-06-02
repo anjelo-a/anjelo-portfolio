@@ -1,13 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
 
 export function LightboxGallery({ images, title }: { images: string[]; title: string }) {
   const [index, setIndex] = useState(0);
   const [active, setActive] = useState(false);
-  const [, startTransition] = useTransition();
+
+  useEffect(() => {
+    images.forEach((src) => {
+      const image = new window.Image();
+      image.src = src;
+    });
+  }, [images]);
 
   if (images.length === 0) {
     return (
@@ -19,26 +25,24 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
 
   const current = images[index];
   const isPoisonTrace = title === "PoisonTrace";
+  const isSnapLedger = title === "SnapLedger";
   const frameClass = isPoisonTrace ? "bg-black" : "bg-neutral-100";
+  const frameSizeClass = isSnapLedger ? "mx-auto aspect-[362/780] max-w-[280px]" : "aspect-[2/1] w-full";
   const controlClass = "bg-neutral-950 text-white shadow-[0_8px_24px_rgba(0,0,0,0.22)] transition hover:bg-neutral-800";
 
   const goPrevious = () => {
-    startTransition(() => {
-      setIndex((currentIndex) => (currentIndex === 0 ? images.length - 1 : currentIndex - 1));
-    });
+    setIndex((currentIndex) => (currentIndex === 0 ? images.length - 1 : currentIndex - 1));
   };
   const goNext = () => {
-    startTransition(() => {
-      setIndex((currentIndex) => (currentIndex === images.length - 1 ? 0 : currentIndex + 1));
-    });
+    setIndex((currentIndex) => (currentIndex === images.length - 1 ? 0 : currentIndex + 1));
   };
 
   return (
     <>
       <div className="grid gap-3">
         <div className="relative px-12 sm:px-14">
-          <div className={`relative aspect-[2/1] w-full overflow-hidden ${frameClass}`}>
-            <Image alt={`${title} screenshot ${index + 1}`} className="object-contain" fill sizes="(min-width: 1024px) 768px, calc(100vw - 112px)" src={current} />
+          <div className={`relative overflow-hidden ${frameSizeClass} ${frameClass}`}>
+            <Image alt={`${title} screenshot ${index + 1}`} className="object-contain" fill sizes={isSnapLedger ? "280px" : "(min-width: 1024px) 768px, calc(100vw - 112px)"} src={current} unoptimized />
           </div>
           <button aria-label="Open full image" className={`absolute right-16 top-3 grid h-9 w-9 place-items-center ${controlClass}`} onClick={() => setActive(true)} type="button">
             <Maximize2 size={16} strokeWidth={1.8} />
@@ -63,8 +67,8 @@ export function LightboxGallery({ images, title }: { images: string[]; title: st
                 <X size={18} />
               </button>
             </div>
-            <div className={`relative aspect-[2/1] ${frameClass}`}>
-              <Image alt={`${title} enlarged screenshot`} className="object-contain" fill sizes="(min-width: 1024px) 1024px, calc(100vw - 32px)" src={current} />
+            <div className={`relative ${isSnapLedger ? "mx-auto aspect-[362/780] max-h-[80vh] max-w-[362px]" : "aspect-[2/1]"} ${frameClass}`}>
+              <Image alt={`${title} enlarged screenshot`} className="object-contain" fill sizes={isSnapLedger ? "362px" : "(min-width: 1024px) 1024px, calc(100vw - 32px)"} src={current} unoptimized />
               <button aria-label="Previous image" className={`absolute left-3 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center ${controlClass}`} onClick={goPrevious} type="button">
                 <ChevronLeft size={22} strokeWidth={1.9} />
               </button>

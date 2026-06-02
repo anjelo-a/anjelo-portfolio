@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, ImageIcon, Mail, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Mail, MapPin } from "lucide-react";
 import { LightboxGallery } from "@/components/lightbox-gallery";
 import { ResumeCard } from "@/components/resume-card";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -13,10 +14,14 @@ export default function Home() {
         <ThemeToggle />
       </div>
       <header className="grid gap-7 border-b border-[var(--line)] pb-9 md:grid-cols-[168px_1fr]">
-        <div className="flex aspect-square w-full max-w-[168px] items-center justify-center bg-neutral-100 text-neutral-500">
-          <ImageIcon size={34} strokeWidth={1.6} />
-          <span className="sr-only">Profile image placeholder</span>
-        </div>
+        <Image
+          alt={profile.name}
+          className="aspect-square w-full max-w-[168px] object-cover"
+          height={168}
+          priority
+          src="/profile/IMG_2572.jpeg"
+          width={168}
+        />
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl font-semibold leading-tight sm:text-4xl">{profile.name}</h1>
           <p className="mt-2 inline-flex items-center gap-2 text-sm text-neutral-700">
@@ -27,7 +32,7 @@ export default function Home() {
             <a className="primary-button inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium" href={`mailto:${profile.email}`}>
               <Mail size={16} /> Send Email
             </a>
-            <Link className="inline-flex items-center gap-2 border-b border-neutral-900 px-1 py-2.5 text-sm font-medium" href="/projects">
+            <Link className="inline-flex items-center gap-2 px-1 py-2.5 text-sm font-medium hover:text-neutral-600" href="/projects">
               View Projects <ArrowRight size={15} />
             </Link>
           </div>
